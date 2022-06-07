@@ -41,7 +41,24 @@ missionAbort.addEventListener("click", event =>{
         spaceShuttleHeight.innerHTML = 0;
     }
 });
+up.addEventListener("click", function (event) {
+    objImage.style.top = parseInt(objImage.style.top) - 10 + "px";
+    let value = spaceShuttleHeight.innerHTML;
+    spaceShuttleHeight.innerHTML = Number(value) + 10000;
+    });    
 
+down.addEventListener("click", function (event) {
+    objImage.style.top = parseInt(objImage.style.top) + 10 + "px";
+    let value = spaceShuttleHeight.innerHTML;
+    spaceShuttleHeight.innerHTML = Number(value) - 10000;
+    });
 
+right.addEventListener("click", function (event) {
+    objImage.style.left = parseInt(objImage.style.left) + 10 + "px";
+    });
+
+left.addEventListener("click", function (event) {
+    objImage.style.left = parseInt(objImage.style.left) - 10 + "px";
+     });
 }
-window.addEventListener("load", init);
+window.addEventListener("load", init);g
